@@ -1,0 +1,40 @@
+.box_hijo_home{
+    /* margin-top: 6px; */
+   
+    margin-left: 2rem;
+  
+    
+   
+    display: flex;
+    
+   
+  }
+  .box_hijo_home input{
+    width: 15rem;
+     background:white; 
+    border-radius:15px;
+    font-family:Georgia;
+    font-size:16px;
+    padding:8px 48px;
+    border: 2px solid white;
+    margin-right: 5px;
+    margin-top: 2rem;
+    box-shadow: 8px 2px 12px bisque;
+ 
+}
+  
+.peligro{
+  font-size: 13px;
+  color:red;
+  font-weight: bold;
+  /* position: relative; */
+  height: 20px;
+  width: 31rem;
+  border-radius: 11rem;
+}
+.box_valida_search{
+  top: 4rem;
+  left:11rem;
+  position: absolute;
+}
+

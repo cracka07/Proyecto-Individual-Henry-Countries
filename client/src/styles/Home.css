@@ -1,0 +1,153 @@
+.box_home{
+     /* background: url("../img/home.jpg"); 
+     background: radial-gradient(black, rgb(2, 2, 89)); */
+      position: fixed;  
+    
+    height:100vh; 
+    width: 100vw; 
+      
+      overflow-y:scroll; 
+      background-size: cover; 
+     background-position: 100% 100%;     
+  }
+.unordered_list_paises{
+  display:inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.box_home_btn button{
+  height: 1.4rem;
+  width: 7rem;
+  box-shadow: 3px 4px 0px 0px black;
+  background: linear-gradient(to bottom, blue 22%, black, blue);
+  background-color:#43452b;
+  border-radius:18px;
+  border:1px solid white;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Georgia;
+  font-size:12px;
+  padding:4px ;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #997f7d;
+  margin-top: 39px;
+  margin-left: 45px;
+}
+  
+ 
+
+.box_home_btn button:hover{
+  background: linear-gradient(to bottom, black 22%, black, blue);
+
+  }
+  .box_home_btn button:active {
+position:relative;
+top:1px;
+}
+.box_busqueda{
+  display: flex;
+}
+.box_filter_order{
+  display:flex;
+  justify-content: center;
+}
+.order_alfabet{
+
+
+  height: 1.4rem;
+  width: 7rem;
+  box-shadow: 3px 4px 0px 0px black;
+  background: linear-gradient(to bottom, blue 22%, black, blue);
+  background-color:black;
+  border-radius:18px;
+  border:1px solid white;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Georgia;
+  font-size:12px;
+  padding:4px ;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #997f7d;
+  margin-top:30px;
+  margin-left: 70px;
+  
+
+}
+.order_alfabet:hover {
+  background: linear-gradient(to bottom, blue 22%, black, blue);
+  background-color:black;
+}
+.order_alfabet:active {
+position:relative;
+top:1px;
+
+}
+.box_order_alfabet h5{
+  position: absolute;
+margin: 4px;
+color:white;
+margin-left: 3rem;
+font-family: 'Permanent Marker', cursive;
+letter-spacing: 2px;
+
+font-size:15px;
+} 
+.box_order_alfabet{
+  margin-top: 33px;
+}
+
+ .order_population{
+   
+  height: 1.4rem;
+  width: 7rem;
+  box-shadow: 3px 4px 0px 0px black;
+  background: linear-gradient(to bottom, blue 22%, black, blue);
+  background-color:black;
+  border-radius:18px;
+  border:1px solid white;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Georgia;
+  font-size:12px;
+  padding:4px ;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #997f7d;
+  margin-top:30px;
+  margin-left: 18px;
+  
+
+ 
+}
+.order_population:hover {
+  background: linear-gradient(to bottom, blue 22%, black, blue);
+  background-color:black;
+
+  }
+.order_populationt:active {
+	position:relative;
+	top:1px;
+  
+} 
+ .box_order_population h5{
+  position: absolute;
+color:white;
+width: 16rem;
+top: 87px;
+left: 34rem;
+font-size:15px;
+font-family: 'Permanent Marker', cursive;
+letter-spacing: 2px;
+
+} 
+.box_order_population{
+  margin-top: 33px;
+}
+
+.box_form_btn{
+  margin-top: 3rem;
+}

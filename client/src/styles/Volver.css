@@ -1,0 +1,36 @@
+.button_volver{
+  margin-top: 11px;
+  margin-left: 85px;
+  
+  
+}
+.button_volver button{
+  height: 1.4rem;
+  width: 7rem;
+    box-shadow: 3px 4px 0px 0px black;
+    background: linear-gradient(to bottom, blue 22%, black, blue);
+    background-color:#43452b;
+    border-radius:18px;
+    border:1px solid white;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Georgia;
+    font-size:12px;
+    padding:4px ;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #997f7d;
+    margin-top:30px;
+    margin-left: 32px;
+    
+ 
+}
+.button_volver button:hover {
+  background: linear-gradient(to bottom, black 22%, black, blue);
+
+  }
+.button_volver button:active {
+	position:relative;
+	top:1px;
+  
+}

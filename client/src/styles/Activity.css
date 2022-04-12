@@ -1,0 +1,48 @@
+ .filter_activity{ 
+  
+  margin: 31px 8px 5px;
+   height: 1.4rem;
+   width: 7rem;
+   box-shadow: 3px 4px 0px 0px black;
+   background: linear-gradient(to bottom, blue 22%, black, blue);
+   background-color:black;
+   border-radius:18px;
+   border:1px solid white;
+   display:inline-block;
+   cursor:pointer;
+   color:#ffffff;
+   font-family:Georgia;
+   font-size:12px;
+   padding:4px ;
+   text-decoration:none;
+   text-shadow:0px 1px 0px #997f7d;
+    
+ 
+ } 
+ .filter_activity:hover {
+  background: linear-gradient(to bottom, black 22%, black, blue);
+  background-color:black;
+  transition: 1s;
+
+  }
+  .filter_activity:active {
+    position:relative;
+    top:1px;
+  
+}
+
+.box_filter_activity h5{
+  position: absolute;
+  margin: 4px;
+  color:white;
+  margin-left: 1rem;
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 2px;
+  
+font-size:15px;
+ 
+}
+.box_filter_activity{
+  margin-top: 33px;
+}
+

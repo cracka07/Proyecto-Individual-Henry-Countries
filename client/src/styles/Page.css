@@ -1,0 +1,15 @@
+.li_page{
+    list-style: none;
+    margin-right: 2px;
+}
+.li_page button{
+    cursor:pointer;
+    color: white;
+    background: rgb(6 8 23);
+    box-shadow: 1px 0px 0px blue;
+}
+
+.list_unordered_page{
+    display: flex;
+    justify-content: center;
+}
