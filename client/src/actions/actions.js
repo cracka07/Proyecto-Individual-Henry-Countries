@@ -1,4 +1,5 @@
 import axios from "axios"
+
 export const GET_COUNTRIES="GET_COUNTRIES"
 export const GET_COUNTRIES_ID="GET_COUNTRIES_ID"
 export const GET_COUNTRIES_NAME="GET_COUNTRIES_NAME"
@@ -8,7 +9,7 @@ export const ORDEN_ALFABET="ORDEN_ALFABET"
 export const ORDEN_POBLACION="ORDEN_POBLACION"
 export const CREATE_ACTIVITY="CREATE_ACTIVITY"
 export const FILTER_ACTIVITY="FILTER_ACTIVITY"
-
+export const DELETE="DELETE"
 
 
 
@@ -110,3 +111,12 @@ export function getActivity(){
     }
   } 
 }
+export function delet(id){
+  console.log(id)
+  return {
+    type:DELETE,
+    payload:id
+  }
+}
+
+

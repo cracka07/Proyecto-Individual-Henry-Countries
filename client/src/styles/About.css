@@ -1,0 +1,31 @@
+.box_about{
+        display: flex;
+    margin-top: 11rem;
+    margin-left: 11rem;
+}
+.box_about button {
+    font-family: 'Permanent Marker', cursive;
+    position: absolute;
+    left: 8rem;
+      top: 245px;
+    cursor: pointer;
+    border-radius: 31px;
+    background: linear-gradient(to left, rgb(2,2,85) 1%, black, black);
+    width: 9rem;
+    height: 50px;
+    
+  
+   
+    font-weight: 600;
+    color:white;
+    font-size: 15px;
+    
+    letter-spacing:3px;
+
+  }
+  
+  .box_about button:hover {
+    color: white;
+    transition: 1s;
+    background: gray;
+  }

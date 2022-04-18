@@ -1,0 +1,26 @@
+
+.box_about_detail {
+    margin-top:4rem;
+    margin-right: 0rem;
+    border:1px solid white;
+    width:34rem;
+    height: 16rem;
+    margin-left: 10rem;
+    background:linear-gradient(black,blue);
+    border-radius:30px;
+}
+.box_about_detail img{
+    border-radius:15px;
+    padding-top:5px;
+    border:1px solid black;
+}
+.box_desc{
+    margin-top: -1rem;
+    color:white;
+    font-style: italic;
+}
+.parrafo_desc{
+    color:white;
+    padding-right: 64px;
+   margin-left: 2rem;
+}

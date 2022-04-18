@@ -149,5 +149,32 @@ letter-spacing: 2px;
 }
 
 .box_form_btn{
-  margin-top: 3rem;
+  margin-top: 1rem;
+}
+.planet_home{
+  width: 53px;
+  animation: 
+  nudge 5s linear infinite alternate;
+  
+    
+}
+.box_planet{
+  
+  transition: all 2s;
+  position: absolute;
+  margin-left: 47rem;
+  margin-top: 80px;
+}
+
+
+
+@keyframes nudge {
+  0%, 40% {
+    transform: translate(0px, 0);
+  }
+  
+ 40% {
+    transform: translate(60px, 0px);
+  }
+ 
 }

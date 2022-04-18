@@ -1,7 +1,7 @@
 import React,{useEffect} from 'react'
 import "../../styles/Activity.css"
 import {useDispatch,useSelector} from "react-redux"
-import {filterActivity, getActivity} from "../../actions/actions"
+import {filterActivity,  getActivity} from "../../actions/actions"
 
 
 function Activity() {
@@ -16,6 +16,8 @@ function Activity() {
   const handleChange=(e)=>{
     dispatch(filterActivity(e.target.value))
       }
+  
+
       
   
   return (

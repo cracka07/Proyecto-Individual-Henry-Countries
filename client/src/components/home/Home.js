@@ -5,7 +5,7 @@ import { getCountries, ordenAlfabet, ordenPoblacion } from "../../actions/action
 import Country from "./Country";
 import { Link } from "react-router-dom";
 import Search from "./Search";
-import Volver from "../volver/Volver";
+import logo from "../../img/planeta.jpg"
 import Continent from "../filtros/Continent";
 import Activity from "../filtros/Activity";
 import Page from "../paginado/Page";
@@ -76,9 +76,11 @@ const handledSortPop=(e)=>{
             <button>Crear Actividades</button>
           </Link>
         </div>
-      
-      </div>
+        <div className="box_planet">
+        <img className="planet_home" src={logo} alt="earth"/>
+        </div>
 
+      </div>
       <div className="box_filter_order"> 
       <Continent />
       <Activity/>
@@ -93,7 +95,6 @@ const handledSortPop=(e)=>{
     <div className="box_order_population">
            <h5>habitantes</h5>
          <select className="order_population" onChange={(e)=>handledSortPop(e)}>
-        <option value="all">Todos</option>
          <option value="asc">Ascendiente</option>
          <option value="desc">Descendiente</option>
          </select>
@@ -117,7 +118,8 @@ const handledSortPop=(e)=>{
               id={el.id}
               name={el.name}
               flag={el.flags}
-              continent={el.continents}              
+              poblacion={el.population + " habitantes"}
+              continent={el.continents}         
             />
            
           </div>

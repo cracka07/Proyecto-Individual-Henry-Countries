@@ -29,7 +29,6 @@ router.get("/", async (req, res, next) => {
   const { name } = req.query;
 
   if (name) {
-
     try {
       const busca = await Country.findAll({
         where: {

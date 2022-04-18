@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {useDispatch} from "react-redux"
 import { getCountriesName } from '../../actions/actions'
 import "../../styles/Search.css"
+import logo from "../../img/school_education_zoom_lens_glass_magnifying_find_detective_Rp0fTLq.png"
 
 export function valida(input){
   let errors={};
@@ -33,8 +34,12 @@ function Search() {
   return (
     <div>
        <div className="box_hijo_home">
-             
-             <input  onChange={(e)=>handleChange(e)} type="text" name="name" value={input.name} placeholder="Ingrese valor"/>
+         <div className="search_buscar"> 
+             <img   src={logo} alt="not found"/>
+             </div>
+             <div className="box_search_buscar">
+             <input   onChange={(e)=>handleChange(e)} type="text" name="name" value={input.name} placeholder="Ingrese valor"/>
+             </div>
             <div className="box_valida_search">
               {
                 error.name && <div className="peligro">{error.name}</div>

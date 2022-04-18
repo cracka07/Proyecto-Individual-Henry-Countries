@@ -1,19 +1,4 @@
-.box_crear_form{
-    /* margin: 0;
 
-    background: url("../img/form.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% 50%;
-    height: 100vh;
-
-    width: 100vw;
-
-    position: fixed;
-    top: 0px;
-    right: 0; */
-
-}
 fieldset{
    width: 0;
     height: 21rem;
@@ -27,7 +12,7 @@ fieldset{
     border: 2px;
     box-shadow: 4px 3px 12px 4px;
 
-
+ padding-right: 3rem;
 
 
 }
@@ -39,10 +24,7 @@ legend{
 
 }
 label{
-    /* color: white;
-    font-weight: bold;
-    margin-right: 19px;
-    font-size:16px; */
+    
     color: white;
     font-weight: bold;
     margin-right: 6px;
@@ -57,8 +39,7 @@ input{
     font-size:12px;
     padding:8px 48px;
     border: 2px solid white;
-    /* margin: 0px 0px 37px 0px; */
-    /* height: 1rem; */
+    
     height: 12px;
     margin: 0px 0px 4px 0px;
 }
@@ -74,7 +55,7 @@ input{
     margin-right: 1rem;
     width: 16rem;
 
-    /* margin-right: 1rem; */
+   
 }
 .select_season_form{
     background:bisque;
@@ -88,7 +69,7 @@ input{
     margin-right: 1rem;
     width: 16rem;
 
-    /* margin-right: 1rem; */
+    
 }
 .select_country_form{
     background:bisque;
@@ -102,37 +83,45 @@ input{
     margin-right: 1rem;
     width: 16rem;
 
-    /* margin-right: 1rem; */
+   
 }
 ::placeholder {
     color: black;
-    font-size: 1em;
+    font-size: 0.5rem;
+   
   }
 
 .crear{
 
-    box-shadow: 3px 4px 0px 0px #8a2a21;
-    background:linear-gradient(to bottom, #43452b 5%, #f24437 100%);
-    background-color:#43452b;
-    border-radius:18px;
-    border:1px solid #d02718;
-    display:inline-block;
-    cursor:pointer;
-    color:#ffffff;
-    font-family:Georgia;
-    font-size:19px;
-    padding:8px 48px;
-    text-decoration:none;
-    text-shadow:0px 1px 0px #997f7d;
+    
+     width: 8rem;
+     height:30px;
+     box-shadow: 2px 2px 3px 0px white;
+     background: linear-gradient(to bottom, blue 22%, black, blue);
+     background-color:black;
+     border-radius:18px;
+     border:1px solid white;
+     display:inline-block;
+     cursor:pointer;
+     color:#ffffff;
+     font-family:Georgia;
+     font-size:15px;
+     padding:4px ;
+     text-decoration:none;
+     text-shadow:0px 1px 0px #997f7d;
     margin-top:0px;
+    
 }
+
 .crear:hover {
-	background:linear-gradient(to bottom, #f24437 5%, #43452b 100%);
-	background-color:#f24437;
+    background: linear-gradient(to bottom, black 22%, black, blue);
+    background-color:black;
+  transition: 1s;
   }
 .crear:active {
-	position:relative;
-	top:1px;
+    background: linear-gradient(to bottom, black 22%, black, blue);
+    background-color:black;
+  
 }
 .crear_to_home{
     width: 59rem;
@@ -146,26 +135,21 @@ input{
 
 }
   .box_valida_form{
-  /* position: absolute;
-    top: 15rem;
-    left: 27rem; */
+  
     height: 3rem;
-    /* margin: 0px 44px 56px 138px; */
+    
 }
 
-/* input.danger{
-    /* margin: 0 auto;
-} */
+
 .box_label{
-    /* height: 2rem; */
+   
     height: 33px;
     display:flex;
-    /* height: 92px; */
-    /* margin: 0px 38px 27px; */
+   
 }
 .box_box{
     display:inline-block;
-    /* height:3rem; */
+  
     height: 2.3rem;
 }
 
@@ -174,16 +158,57 @@ input{
     border:1px solid;
 }
 .box_form_estado_country{
-    display: flex;
+   
     list-style: none;
-    background: lightgray;
+    
     flex-wrap: wrap;
     border-radius: 12px;
-    margin-top: 28px;
+    top: 6rem;
+    left: 36rem;
+   
+    position:absolute;
+    width: 224px;
+    height: 370px;
+    /* overflow-y:scroll; */
 }
 .box_map_form{
    
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
-    font-style: italic
+    font-style: italic;
+  
+    
+    
+    margin-bottom: 14px;
+    margin-top: -2pc;
+}
+.box_map_form p{
+    margin-top: -24px;
+    padding-bottom: 9px;
+    display:flex;
+    width: 251px;
+    color: white;
+    margin-bottom: -23px;
+    flex-wrap: wrap;
+    margin-left: 36px;
+    padding-right: 52px;
+}
+
+.btn_form_estado{
+    border-radius: 22px;
+    width: 23px;
+    height: 22px;
+    
+    cursor:pointer;
+    background:red;
+   
+    display: flex;
+    margin-top:33px;
+    padding-left: 5px;
+    padding-top:0px;
+    padding-bottom: 21px;
+}
+.box_btn_form_estado{
+    width: 28px;
+    margin-top: 0px;
 }

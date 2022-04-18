@@ -2,9 +2,9 @@ import React,{useEffect} from 'react'
 import "../../styles/Detail.css"
 import {useDispatch,useSelector} from "react-redux"
 import { getCountriesId } from '../../actions/actions'
-import { useParams } from 'react-router-dom'
+import {  useParams } from 'react-router-dom'
 import Volver from '../volver/Volver'
-
+import logo from "../../img/school_education_globe_world_countries.png"
 
 function Detail() {
     const {id}=useParams()
@@ -17,82 +17,84 @@ function Detail() {
     },[id,dispatch])
 
    
-
+   
+    
 
   return (
-    <div className="box_detail">  
-        <div className="box_hijo_detail">
-           
-            {
-             pais &&
-              <div>
-                <h3>{pais.id}</h3> 
-               
-                <h3>{pais.name}</h3>
-        
-                </div>
-            }
-        </div>
+    <div className="box_main_principal">  
+   
+         
+      
+           {
+   pais &&
+   <div className="box_titulos" >
+        <h1 className="animate__animated animate__backInDown">{pais.name}</h1> 
+      <h3 className="animate__animated animate__backInDown">{pais.id}</h3> 
 
-        
-        <div className="box_hijo_detail_img">
+     </div>
+           }
+            
+             
             {
               pais &&
+              
               <div className="box_img">
             <img src={pais.flags} alt="img not found"/>
+          
              </div>
+             
            }
+       <div className="volver_a">  <Volver/> </div>
+
+      {
+        pais &&
+        <div className="box_main_detail">
+        <div className="box_detail_map">
+        <p className="parr_name">Continente</p>
+        <p className="parr_detail">{pais.continents}</p>
         </div>
-
- <table border="2px" className="box_detail_tabla">
-       <tr>
-          <th>Continente</th>
-          <th>Capital</th>
-          <th>Subregión</th>
-          <th>Área</th>
-          <th>Población</th>
-      </tr>
-      
-        {
-          pais &&
-       <tr className="box_map_detail">
-          <td>{pais.continents}</td>
-          <td>{pais.capital}</td>
-          <td>{pais.subregion ? pais.subregion : "Sin Datos"}</td>
-          <td>{pais.area + " " + "km2"}  </td>
-          <td> {pais.population}</td>
-          </tr>   
-       
-      
-}
-
-        </table>
-       
-        <table border="2px" className="box_detail_segunda_tabla">
-       <tr>
-          <th className="th_detail_activities">Actividades</th>
-        </tr>
-        
-          <tr className="tr_detail_activities">
-            {
+        <div className="box_detail_map">
+        <p className="parr_name">Capital</p>
+        <p className="parr_detail_uno">{pais.capital}</p>
+        </div>
+        <div className="box_detail_map">
+        <p className="parr_name">Subregión</p>
+        <p className="parr_detail_uno">{pais.subregion ? pais.subregion : "Sin Datos"}</p>
+        </div>
+        <div className="box_detail_map">
+        <p className="parr_name">Área</p>
+        <p className="parr_detail_uno">{pais.area +" km2"}  </p>
+        </div>
+        <div className="box_detail_map">
+        <p className="parr_name">Población</p>
+        <p className="parr_detail"> {pais.population}</p>
+        </div>
+        <div className="box_detail_map">
+        <p className="parr_name">Actividades</p>
+        <img className="img_detail_mg" width="40px" height="30px"src={logo} alt="not found"/>
+          </div>
+        </div>
+      }
+      <div className="box_act">
+              {
+                pais.activities?.map(el=>
+                 
+                   
+                   <ul className="box_act_uno">
+                   <li className="box_name_act">{el.name.toUpperCase()}</li>
+                   <li className="parr_act">Dificultad:{" " + el.dificult}</li> 
+                   <li className="parr_act">Duración:{" " + el.duration}</li>
+                   <li className="parr_act">Temporada{" " + el.season}</li> 
+                   </ul>
+                  
+                  )
+              }
               
-                  pais.activities?.map(el=>
-                    <div>
-                    <p className="p_detail_act"> {el.name}</p>
-                    <p>Dificultad: {el.dificult}</p>
-                    <p>Duración:{el.duration}</p>
-                    <p>Temporada:{el.season}</p>
-                    </div>
-                    )
-
-                    
-            }
-            
-          </tr>
-        </table>
-         <Volver/>
-        </div>       
-  )         
+          </div>
+          
+        </div>  
+           
+  )       
 }
 
 export default Detail

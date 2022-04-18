@@ -1,12 +1,28 @@
 .li_page{
     list-style: none;
     margin-right: 2px;
+   
 }
 .li_page button{
     cursor:pointer;
     color: white;
     background: rgb(6 8 23);
     box-shadow: 1px 0px 0px blue;
+    border-radius: 7px;
+}
+.li_page button:active{
+ 
+ 
+    background: linear-gradient(to right, black,blue);
+    
+}
+.li_page button:hover{
+   
+    
+    background: linear-gradient(to right, black,blue);
+    
+  
+  
 }
 
 .list_unordered_page{

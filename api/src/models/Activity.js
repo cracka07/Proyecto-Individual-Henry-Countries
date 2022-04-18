@@ -4,8 +4,7 @@ module.exports=sequelize=>{
     sequelize.define("activity",{
   
         name:{
-            type:DataTypes.STRING,
-           
+            type:DataTypes.STRING, 
         },
         dificult:{
             type:DataTypes.ENUM("1","2","3","4","5")

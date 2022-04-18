@@ -1,33 +1,24 @@
 .box_hijo_home{
-    /* margin-top: 6px; */
-   
     margin-left: 2rem;
-  
-    
-   
-    display: flex;
-    
-   
   }
-  .box_hijo_home input{
+  .box_search_buscar input{
     width: 15rem;
      background:white; 
-    border-radius:15px;
-    font-family:Georgia;
-    font-size:16px;
-    padding:8px 48px;
-    border: 2px solid white;
-    margin-right: 5px;
+    border-radius:4px;
     margin-top: 2rem;
-    box-shadow: 8px 2px 12px bisque;
+    outline:none;
+   
  
 }
-  
+::placeholder{
+  margin-left:3rem;
+  font-size:11px;
+}
 .peligro{
   font-size: 13px;
   color:red;
   font-weight: bold;
-  /* position: relative; */
+
   height: 20px;
   width: 31rem;
   border-radius: 11rem;
@@ -36,5 +27,22 @@
   top: 4rem;
   left:11rem;
   position: absolute;
+}
+.search_buscar{
+  height: 32px;
+  position: absolute;
+  top: 40px;
+  padding-right: -32px;
+  left: 297px;
+  background: #d4d4ff;
+  border-radius: 4px;
+}
+.search_buscar img{
+  width: 28px;
+  height: 22px;
+  padding-top: 5px;
+  padding-left:3px;
+  cursor:pointer;
+  
 }
 

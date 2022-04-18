@@ -1,4 +1,5 @@
 import {
+ DELETE,
   ORDEN_ALFABET,
   ORDEN_POBLACION,
   GET_ACTIVITY,
@@ -41,7 +42,7 @@ export default function rootReducer(state = initialState, action) {
       if(action.payload==="all"){
         return{
           ...state,
-          countries:state.activityFiltro
+          countries:state.activityFiltro.filter(fy=>fy.activities.length>0)
         }
       }else{
           return{
@@ -152,11 +153,13 @@ export default function rootReducer(state = initialState, action) {
         
         case CREATE_ACTIVITY:
              return{
-               ...state,
-               
+               ...state,  
              }
-       
-
+        case DELETE:
+          return{
+            ...state,
+            countries:state.countries.filter(d=>d.id!==action.payload)
+          }
     default:
       return state;
   }

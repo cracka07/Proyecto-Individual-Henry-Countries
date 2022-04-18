@@ -3,22 +3,17 @@ const router = Router();
 const { Activity, Country } = require("../db");
 
 
-router.get("/", async(req,res)=>{
+router.get("/", async(req,res,next)=>{
   try{
     const dataBusca=await Activity.findAll({
-     })
-    if(!dataBusca.length){
-      res.status(404).send("No hay actividades")
-    }else{
+    include:Country  })
       res.status(200).send(dataBusca)
-    }
   }catch(e){
-    console.log(e)
+    next(e)
   }
-  
 })
 
-router.post("/", async (req, res) => {
+router.post("/", async (req, res,next) => {
   const { name, dificult, duration, season, countryId } = req.body;
  
   try {
@@ -43,7 +38,7 @@ router.post("/", async (req, res) => {
                     }
 
                 }catch(e){
-                  console.log(e)
+                  next(e)
                 }
           
     }else{
@@ -51,8 +46,9 @@ router.post("/", async (req, res) => {
     }
 
   } catch (e) {
-    console.log(e);
+    next(e);
   }
 });
+
 
 module.exports = router;

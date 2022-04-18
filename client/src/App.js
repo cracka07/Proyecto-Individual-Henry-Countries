@@ -4,6 +4,7 @@ import Home from "./components/home/Home"
 import LandingPage from './components/landingPage/LandingPage';
 import Detail from './components/detail/Detail';
 import Form from './components/create/Form';
+import AboutDetail from './components/about/AboutDetail';
 
 
 
@@ -17,9 +18,13 @@ function App() {
       <Route exact path="/home">
           <Home/>
       </Route>
+      <Route exact path="/about">
+          <AboutDetail/>
+      </Route>
       <Route exact path="/detail/:id">
         <Detail/>
       </Route>
+      
       <Route exact path="/createActivities">
         <Form/>
       </Route>

@@ -2,8 +2,9 @@ import React,{useState,useEffect} from 'react'
 import "../../styles/Form.css"
 import {useDispatch,useSelector} from "react-redux"
 import Volver from '../volver/Volver'
-import { createActivity, getCountries } from '../../actions/actions'
+import { createActivity, delet, getCountries } from '../../actions/actions'
 import { useHistory } from 'react-router-dom'
+
 
 export function valida(input){
     let  tempo=document.getElementById("temp")
@@ -38,7 +39,15 @@ function Form(props) {
 
     const history = useHistory();
     const dispatch=useDispatch()
-    let countries=useSelector(state=>state.countries)
+    let countries=useSelector(state=>state.countries.sort((a,b)=>
+         {   if(a.name>b.name){
+                return 1
+            }
+            if(b.name>a.name){
+                return -1
+            }
+            return 0}
+    ))
 
     const [errors, setErrors]=useState({})
     const [input,setInput]=useState({
@@ -83,11 +92,16 @@ useEffect(()=>{
 
    const handleSubmit=(e)=>{
        e.preventDefault()
-       setErrors(valida({...input,[e.target.name]:e.target.value}))
+   
+       if(!input.name ){
+        setErrors(valida({...input,[e.target.name]:e.target.value}))
 
-        if(!Object.keys(errors).length)
+        alert("Campo/s inválido/s")
+       }
+       else  if(!Object.keys(errors).length)
       
         {  
+            
             dispatch(createActivity(input));
            
             alert("Actividad creada");
@@ -99,15 +113,28 @@ useEffect(()=>{
             countryId:[]
              })
           
-         history.push("/home")
-      } else {
+        //  history.push("/home")
+            }
+            
+       else {
         alert("Campo/s inválido/s")
       }
      
-      
+     
    
    }     
-   
+   const handleClick=(id)=>{
+  
+    console.log(id)
+   setInput({ 
+    countryId:input.countryId.filter(f=>f !== id)
+   })
+     
+    
+    
+    
+    
+}
   return (
       <div className="box_crear_form">
           <div className="crear_to_home">
@@ -116,9 +143,10 @@ useEffect(()=>{
           </div>
           <div className="box_form_principal">
     <fieldset > 
+                    
         <legend>Crear Actividad</legend>
     <form   onSubmit={(e)=>handleSubmit(e)}>
-            
+   
         <div className="box_box"> 
            <div className="box_label">
           <label>Nombre</label>
@@ -196,18 +224,13 @@ useEffect(()=>{
                     <option value="0">Seleccionar...</option>
                   {
                        countries?.map(e=>( 
-                    <option  value={e.id}>{e.name}</option>
+                    <option  value={e.id} >{e.name}</option>
                          ))
                  }
-                  
+                   
                   </select>
-                  <ul  className="box_form_estado_country">                 
-                      {
-                         input.countryId.map(el=>
-                               <li key={el.id} className="box_map_form">{el + ", " }</li>                      
-                          )
-                      }
-                  </ul>
+                
+                
                 </div>
               </div>
               { 
@@ -219,14 +242,36 @@ useEffect(()=>{
                 </div> 
                     }
           </div> 
+            
            <div className="box_form_btn">
                <button  className="crear">Crear</button>
-           </div>           
+           </div> 
+           <div  className="box_form_estado_country">  
+    {
+       input.countryId.map(el=>
+             <div key={el.id}  className="box_map_form">
+              <div className="box_btn_form_estado"> 
+               <button  onClick={()=>handleClick(el)} className="btn_form_estado">
+              x
+              
+             </button>  
+             </div>
+              <p>{el } </p> 
+            
+               </div> 
+               
+                
+          )
+          
+      }   
+        
+  </div>  
     </form>
     
     </fieldset>
-    
+  
     </div>
+      
     </div>
   )
 }
