@@ -9,6 +9,7 @@ import logo from "../../img/planeta.jpg"
 import Continent from "../filtros/Continent";
 import Activity from "../filtros/Activity";
 import Page from "../paginado/Page";
+import log from "../../img/cargar.png"
 
 
 
@@ -38,7 +39,9 @@ function Home() {
       setPage(numPage)
   }
 
-  
+  function handleLoad(e){
+    dispatch(getCountries());
+  }
 
 
   useEffect(() => {
@@ -57,18 +60,19 @@ const handledSortPop=(e)=>{
     dispatch(ordenPoblacion(e.target.value))
   setPop(e.target.value)
   }
-  
-
- 
-
   return (
     <div className="box_home">
+       <div className="box_planet">
+        <img className="planet_home" src={logo} alt="earth"/>
+        </div>
       <div className="box_busqueda">
       <div className="button_volver"> 
        <Link to="/">
        <button>Atras</button>
      </Link>
+     
  </div>
+ 
         <Search />
 
         <div className="box_home_btn">
@@ -76,14 +80,21 @@ const handledSortPop=(e)=>{
             <button>Crear Actividades</button>
           </Link>
         </div>
-        <div className="box_planet">
-        <img className="planet_home" src={logo} alt="earth"/>
-        </div>
+       
 
       </div>
+    
       <div className="box_filter_order"> 
+     
       <Continent />
+      
       <Activity/>
+      <div className="the_button_btn">
+      <button onClick={(e)=>handleLoad(e)} className="the_img_log">
+      <img className="animate__animated animate__rotateIn " src={log} alt="not found"/>
+  
+    </button>
+    </div>
      <div className="box_order_alfabet">
          <h5>orden alfabético</h5>
          <select className="order_alfabet" onChange={(e)=>handledSort(e)}>
@@ -91,7 +102,7 @@ const handledSortPop=(e)=>{
          <option value="desc">Descendiente</option>
          </select>
     </div>
-
+   
     <div className="box_order_population">
            <h5>habitantes</h5>
          <select className="order_population" onChange={(e)=>handledSortPop(e)}>
@@ -101,6 +112,7 @@ const handledSortPop=(e)=>{
          </div>
     </div>
    
+  
      <Page
         paisPage={paisPage}
         paises={paises.length}

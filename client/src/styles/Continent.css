@@ -30,6 +30,10 @@
    top:1px;
  
 }
+ .filter_continent option{
+  background: blue;
+ 
+}
 
 .box_filter_continent h5{
  position: absolute;
@@ -42,4 +46,6 @@
 }
 .box_filter_continent{
   margin-top: 33px;
+  display: flex;
+    justify-content: center;
 }

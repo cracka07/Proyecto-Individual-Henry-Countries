@@ -7,8 +7,7 @@
     border-radius:4px;
     margin-top: 2rem;
     outline:none;
-   
- 
+
 }
 ::placeholder{
   margin-left:3rem;
@@ -18,7 +17,6 @@
   font-size: 13px;
   color:red;
   font-weight: bold;
-
   height: 20px;
   width: 31rem;
   border-radius: 11rem;
@@ -29,13 +27,13 @@
   position: absolute;
 }
 .search_buscar{
-  height: 32px;
+  height: 66px;
   position: absolute;
-  top: 40px;
-  padding-right: -32px;
-  left: 297px;
-  background: #d4d4ff;
+
   border-radius: 4px;
+  width: 34px;
+  display: flex;
+  align-items: flex-end;
 }
 .search_buscar img{
   width: 28px;

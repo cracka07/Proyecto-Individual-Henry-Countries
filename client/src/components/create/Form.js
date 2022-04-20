@@ -4,7 +4,7 @@ import {useDispatch,useSelector} from "react-redux"
 import Volver from '../volver/Volver'
 import { createActivity, delet, getCountries } from '../../actions/actions'
 import { useHistory } from 'react-router-dom'
-
+import Swal from 'sweetalert2'
 
 export function valida(input){
     let  tempo=document.getElementById("temp")
@@ -96,7 +96,7 @@ useEffect(()=>{
        if(!input.name ){
         setErrors(valida({...input,[e.target.name]:e.target.value}))
 
-        alert("Campo/s inválido/s")
+        Swal.fire("Campo/s inválido/s")
        }
        else  if(!Object.keys(errors).length)
       
@@ -104,7 +104,8 @@ useEffect(()=>{
             
             dispatch(createActivity(input));
            
-            alert("Actividad creada");
+            Swal.fire("Actividad creada");
+            
          setInput({ 
             name:"",
             dificult:"",
@@ -113,11 +114,11 @@ useEffect(()=>{
             countryId:[]
              })
           
-        //  history.push("/home")
+         
             }
             
        else {
-        alert("Campo/s inválido/s")
+    Swal.fire("Campo/s inválido/s")
       }
      
      

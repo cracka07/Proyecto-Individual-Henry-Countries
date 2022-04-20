@@ -1,16 +1,16 @@
 
 fieldset{
    width: 0;
-    height: 21rem;
+    height: rem;
     margin-left:10rem;
     margin-top:0;
     border-radius: 46px;
     background: linear-gradient(45deg, transparent, rgb(6 8 23));
     border: 3px solid black;
-    box-shadow: 4px 0px 53px midnightblue;
+    box-shadow: 3px 0px 2px rgb(5, 5, 245);
     padding-right: 7rem;
-    border: 2px;
-    box-shadow: 4px 3px 12px 4px;
+    border: 2px solid blue;
+    /* box-shadow: 4px 3px 12px 4px; */
 
  padding-right: 3rem;
 
