@@ -81,10 +81,10 @@ function Detail() {
                  
                    
                    <ul className="box_act_uno">
-                   <li className="box_name_act">{el.name.toUpperCase()}</li>
-                   <li className="parr_act">Dificultad:{" " + el.dificult}</li> 
-                   <li className="parr_act">Duración:{" " + el.duration}</li>
-                   <li className="parr_act">Temporada{" " + el.season}</li> 
+                   <div className="box_name_act">{el.name.toUpperCase()}</div>
+                   <li className="parr_act">Dificultad: <div className="det-span">{" " + el.dificult}</div></li> 
+                   <li className="parr_act">Duración:<div className="det-span-i">{" " + el.duration}</div></li>
+                   <li className="parr_act">Temporada: <div className="det-span-ii">{" " + el.season}</div></li> 
                    </ul>
                   
                   )

@@ -9,7 +9,7 @@
   width: 29rem;
   font-family: 'Permanent Marker', cursive;
   font-size: 41px;
-  left: 12rem;
+  left: 20rem;
   
 }
 .h_uno span { display:inline-block; animation:float .2s infinite; }
@@ -86,8 +86,8 @@ body:before {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0%;
-  left: 0%;
+  top: 20%;
+  left: 60%;
   background: url(https://pbs.twimg.com/media/DON8Y_eUMAAV4pi.jpg) repeat-x;
   background-size: cover;
   border-radius: 50%;
@@ -112,8 +112,8 @@ body:before {
 .box_hijo_landing button {
   font-family: 'Permanent Marker', cursive;
   position: relative;
-  left: 15rem;
-    top: 245px;
+  left: 27rem;
+    top: 300px;
   cursor: pointer;
   border-radius: 31px;
   background: linear-gradient(to left, rgb(2,2,85) 1%, black, black);
@@ -144,22 +144,14 @@ body:before {
     width: 3rem;
     /* height: 3rem; */
     top: 36px;
-    margin-left: 166px;
+    margin-left: 11rem;
 }
 .logo_landing{
   margin-top:5px;  
   display:flex;
   width:91px;
 }
-.logo_segundo_landing{
-  width:4rem;
-  transform:rotate(35deg);
-  position: absolute;
-    width: 2rem;
-    /* height: 3rem; */
-    top: 36px;
-    margin-left: 200px;
-}
+
 .logo_segundo_landing{
   width:4rem;
    transform:rotate(35deg); 
@@ -168,7 +160,7 @@ body:before {
     width: 3rem;
     /* height: 3rem; */
     top: 36px;
-    margin-left: 677px;
+    margin-left: 46rem;
 
 } 
 .span_landing{

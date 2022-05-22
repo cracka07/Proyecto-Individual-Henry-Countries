@@ -63,7 +63,7 @@ const handledSortPop=(e)=>{
   return (
     <div className="box_home">
        <div className="box_planet">
-        <img className="planet_home" src={logo} alt="earth"/>
+      
         </div>
       <div className="box_busqueda">
       <div className="button_volver"> 
@@ -85,7 +85,9 @@ const handledSortPop=(e)=>{
       </div>
     
       <div className="box_filter_order"> 
-     
+      <div className="div_tierra_home"><img className="planet_home" src={logo} alt="earth"/></div>
+
+      
       <Continent />
       
       <Activity/>

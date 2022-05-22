@@ -6,8 +6,8 @@
 .box_about button {
     font-family: 'Permanent Marker', cursive;
     position: absolute;
-    left: 8rem;
-      top: 245px;
+    left: 17rem;
+      top: 300px;
     cursor: pointer;
     border-radius: 31px;
     background: linear-gradient(to left, rgb(2,2,85) 1%, black, black);

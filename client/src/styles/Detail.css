@@ -128,15 +128,17 @@
     background:linear-gradient(blue,transparent);
     font-size: 14px;
    
-    margin-left: 22.8rem;
+    margin-left: 29.8rem;
   
-    width: 12rem;
+    width: 23rem;
   
     overflow-y: scroll;
     height: 6rem;
     overflow-y: scroll;
 }
-
+.det-span{
+ margin-left:15rem;
+}
 .box_act_uno{
     padding-left: 2px;
     list-style: none;
@@ -145,8 +147,16 @@
 .parr_act{
     margin-left: 9px;
     color:white;
+    display:flex;
 }
 .box_name_act{
     color:bisque;
     font-weight: bold;
+    margin-left: 9rem;
+}
+.det-span-i{
+    margin-left:15.1rem;
+}
+.det-span-ii{
+    margin-left:14.6rem;
 }
