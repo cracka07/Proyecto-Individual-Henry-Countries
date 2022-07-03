@@ -5,7 +5,7 @@
     width: 15rem;
      background:white; 
     border-radius:4px;
-    margin-top: 2rem;
+    margin-top: 2.6rem;
     outline:none;
 
 }
@@ -41,6 +41,8 @@
   padding-top: 5px;
   padding-left:3px;
   cursor:pointer;
+  position:absolute;
+  top:2.5rem;
   
 }
 

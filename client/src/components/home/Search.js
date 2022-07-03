@@ -38,7 +38,7 @@ function Search() {
              <img   src={logo} alt="not found"/>
              </div>
              <div className="box_search_buscar">
-             <input   onChange={(e)=>handleChange(e)} type="text" name="name" value={input.name} placeholder="Ingrese valor"/>
+             <input className="search_input"  onChange={(e)=>handleChange(e)} type="text" name="name" value={input.name} placeholder="Ingrese valor"/>
              </div>
             <div className="box_valida_search">
               {

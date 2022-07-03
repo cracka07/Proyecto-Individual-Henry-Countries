@@ -94,8 +94,8 @@ input{
 .crear{
 
     
-     width: 8rem;
-     height:30px;
+    height: 2.3rem;
+    width: 7.7rem;
      box-shadow: 2px 2px 3px 0px white;
      background: linear-gradient(to bottom, blue 22%, black, blue);
      background-color:black;
@@ -105,7 +105,7 @@ input{
      cursor:pointer;
      color:#ffffff;
      font-family:Georgia;
-     font-size:15px;
+     font-size:18px;
      padding:4px ;
      text-decoration:none;
      text-shadow:0px 1px 0px #997f7d;

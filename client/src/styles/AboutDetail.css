@@ -4,7 +4,7 @@
     margin-right: 0rem;
     border:1px solid white;
     width:34rem;
-    height: 16rem;
+    height: 20rem;
     margin-left: 10rem;
     background:linear-gradient(black,blue);
     border-radius:30px;
@@ -19,6 +19,8 @@
     color:white;
     font-style: italic;
 }
+
+
 .parrafo_desc{
     color:white;
     padding-right: 64px;
