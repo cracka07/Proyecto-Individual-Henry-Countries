@@ -16,7 +16,7 @@ export const DELETE="DELETE"
 export function getCountries(){
   return async function(dispatch){
     try{
-         const pedido=await axios.get("http://localhost:3001/countries")
+         const pedido=await axios.get("/countries")
          return dispatch({
            type:GET_COUNTRIES,
            payload:pedido.data
@@ -32,7 +32,7 @@ export function getCountries(){
 export function getCountriesId(id){
   return async function(dispatch){
     try{
-        const pedido=await axios.get(`http://localhost:3001/countries/${id}`)
+        const pedido=await axios.get(`/countries/${id}`)
         return dispatch(
           {
             type:GET_COUNTRIES_ID,
@@ -48,7 +48,7 @@ export function getCountriesId(id){
 export function getCountriesName(name){
   return async function(dispatch){
     try{
-        const pedido=await axios.get(`http://localhost:3001/countries?name=${name}`)
+        const pedido=await axios.get(`/countries?name=${name}`)
         return dispatch(
           {
             type:GET_COUNTRIES_NAME, 
@@ -90,7 +90,7 @@ export function ordenPoblacion(value){
 export function createActivity(value){
   return async function(){
     try{
-      const pedido=await axios.post("http://localhost:3001/activity/",value)
+      const pedido=await axios.post("/activity/",value)
       return {type:CREATE_ACTIVITY,
               payload:pedido.data}
     }catch(e){
@@ -101,7 +101,7 @@ export function createActivity(value){
 export function getActivity(){
   return async function(dispatch){
     try{
-      const pedido=await axios.get("http://localhost:3001/activity")
+      const pedido=await axios.get("/activity")
       return dispatch({
         type:GET_ACTIVITY,
        payload:pedido.data
