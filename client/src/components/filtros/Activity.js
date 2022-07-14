@@ -17,9 +17,6 @@ function Activity() {
     dispatch(filterActivity(e.target.value))
       }
   
-
-      
-  
   return (
     <div>
       <div className="box_filter_activity">
