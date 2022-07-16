@@ -47,7 +47,7 @@ export default function rootReducer(state = initialState, action) {
       }else{
           return{
             ...state,
-            countries:state.activityFiltro.filter(fil=>fil.activities.find(f=>f.name==action.payload))
+            countries:state.activityFiltro.filter(fil=>fil.activities.find(f=>f.name===action.payload))
           }
       } 
     case FILTER_CONTINENT:
